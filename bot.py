@@ -4,7 +4,7 @@ from telebot import types
 import vk
 import time
 
-bot = telebot.TeleBot(cfg.TOKEN)
+bot = telebot.TeleBot('5131645257:AAHyEawmAqAe-kDRi8l5GLZXk2ZAEiCTsFo')
 
 stat = 'Не настроено'
 forget = '..нет данных для вывода..'
