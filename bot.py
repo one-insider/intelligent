@@ -1,6 +1,5 @@
 import telebot
 from telebot import types
-import vk
 import time
 
 bot = telebot.TeleBot('5131645257:AAHyEawmAqAe-kDRi8l5GLZXk2ZAEiCTsFo')
