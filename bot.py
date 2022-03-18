@@ -17,7 +17,7 @@ def start(message):
     print(message.from_user)
 @bot.message_handler(commands=['help'])
 def help(message):
-    bot.send_message(message.chat.id, cfg.Inf)
+    bot.send_message(message.chat.id, 'dokbaeb a ne info')
 
 @bot.message_handler(commands=['text'])
 def tem1(message):
