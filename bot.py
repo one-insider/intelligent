@@ -1,4 +1,3 @@
-import cfg
 import telebot
 from telebot import types
 import vk
