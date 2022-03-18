@@ -59,12 +59,9 @@ def menu():
     key3 = types.KeyboardButton('Айди чата')
     key4 = types.KeyboardButton('От кого')
     key5 = types.KeyboardButton('5')
-    key6 = types.KeyboardButton('Автостатус VK вкл')
-    key7 = types.KeyboardButton('Автостатус VK выкл')
     markup.add(key0, key1)
     markup.add(key2, key3)
     markup.add(key4, key5)
-    markup.add(key6, key7)
     return markup
 
 
@@ -100,22 +97,6 @@ def otvet(message):
     elif message.text == '5':
         bot.delete_message(message.chat.id, message.message_id)
         bot.send_message(message.chat.id, message.chat, reply_markup=types.ReplyKeyboardRemove())
-    elif message.text == 'Автостатус VK вкл':
-        bot.delete_message(message.chat.id, message.message_id)
-        bot.send_message(message.chat.id, 'Автостатус VK Включен', reply_markup=types.ReplyKeyboardRemove())
-        time.sleep(10)
-        bot.delete_message(message.chat.id, message.message_id+1)
-        stat = 'Автостатус VK Включен'
-        vk.pusk.pc()
-    elif message.text == 'Автостатус VK выкл':
-        bot.delete_message(message.chat.id, message.message_id)
-        bot.send_message(message.chat.id, 'Автостатус VK Выключен', reply_markup=types.ReplyKeyboardRemove())
-        time.sleep(10)
-        bot.delete_message(message.chat.id, message.message_id + 1)
-        stat = 'Автостатус VK Выключен'
-        vk.pusk.ost()
-    elif message.text == 'Статус VK':
-        bot.send_message(message.chat.id, stat, reply_markup=types.ReplyKeyboardRemove())
 
 if __name__ == "__main__":
     print("Бот запущен")
